@@ -55,16 +55,16 @@ function isEmail(email) {
 
 
 // Email 
-function sendMail() {
-  const email = $('.emailid').val();
-  const name = $('.user').val();
-  console.log(`Name is ${name}`);
-  console.log(`Email is ${email}`);
-  console.log(`The given email validity check result is ${isEmail(email)}`);
-  if ((email != '') && isEmail(email)) {
-    $.get( `sendemail/${email}/${name}`, function( data ) {
-      console.log( "GET to sendemail" );
-    })
-  }
-  console.log($('form').serializeArray());
-};
+// function sendMail() {
+//   const email = $('.emailid').val();
+//   const name = $('.user').val();
+//   console.log(`Name is ${name}`);
+//   console.log(`Email is ${email}`);
+//   console.log(`The given email validity check result is ${isEmail(email)}`);
+//   // if ((email != '') && isEmail(email)) {
+//   //   $.get( `/sendemail`, function( data ) {
+//   //     console.log( "GET to sendemail" );
+//   //   })
+//   // }
+//   console.log($('form').serializeArray());
+// };

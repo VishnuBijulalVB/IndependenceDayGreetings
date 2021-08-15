@@ -46,5 +46,24 @@ app.get('/greetin/:id',function(req,res){
   })
 });
 
+app.get('/sendmail', function(req,res){
+  const id = req.params.id;
+  console.log(id);
+  const uname = req.query.username;
+  console.log(uname);
+  const mail = req.query.email;
+  console.log(mail);
+  var fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
+
+  res.render('greetings',{
+    uname,
+    title: 'Greetings By ' + uname,
+    fullUrl,
+    mail
+  })
+
+  
+})
+
 
 app.listen(port,()=>{console.log(`Server ready at ${port}`)});
