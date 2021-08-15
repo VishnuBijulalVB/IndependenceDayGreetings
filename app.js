@@ -56,13 +56,14 @@ app.get('/sendmail', function(req,res){
   var fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
 
   res.render('greetings',{
+    id,
     uname,
     title: 'Greetings By ' + uname,
     fullUrl,
     mail
   })
 
-  
+
 })
 
 
