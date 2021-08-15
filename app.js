@@ -36,10 +36,13 @@ app.get('/greetin/:id',function(req,res){
   const uname = req.query.username;
   console.log(uname);
 
+  var fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
+
   res.render("greetings",{
     id,
     uname,
-    title: 'Greetings By ' + uname
+    title: 'Greetings By ' + uname,
+    fullUrl
   })
 });
 
